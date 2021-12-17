@@ -9,7 +9,11 @@ class CarroController {
   CarroController(
     this._getCarrosPorCorUseCase,
     this._salvarCarroFavoritoUseCase,
-  );
+  ) {
+    getCarrosPorCor('vermelho');
+  }
+
+  late CarroEntity carro;
 
   getCarrosPorCor(String cor) {
     var carro = _getCarrosPorCorUseCase(cor);
